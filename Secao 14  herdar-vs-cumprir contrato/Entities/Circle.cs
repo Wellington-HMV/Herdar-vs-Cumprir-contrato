@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Entities
 {
-    class Circle:Shape
+    class Circle:AbstractShape
     {
         public double Radius { get; set; }
         public override double Area()
@@ -12,7 +12,12 @@ namespace Entities
         }
         public override string ToString()
         {
-            return "Circle color = "+Color+", radius = "+Radius.ToString("F2",CultureInfo.InvariantCulture)+", area  = "+Area().ToString("F2",CultureInfo.InvariantCulture);
+            return "Circle color = "
+                +Color
+                +", radius = "
+                +Radius.ToString("F2",CultureInfo.InvariantCulture)
+                +", area  = "
+                +Area().ToString("F2",CultureInfo.InvariantCulture);
         }
     }
 }

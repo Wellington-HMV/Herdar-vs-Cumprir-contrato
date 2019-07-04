@@ -2,9 +2,9 @@
 using System.Globalization;
 using Entities;
 
-namespace Secao_14__herdar_vs_cumprir_contrato
+namespace Entities
 {
-    class Rectangle:Shape
+    class Rectangle:AbstractShape
     {
         public double Width { get; set; }
         public double Heigth { get; set; }
@@ -14,8 +14,12 @@ namespace Secao_14__herdar_vs_cumprir_contrato
         }
         public override string ToString()
         {
-            return "Rectangle color = " + Color + " Width: " + Width.ToString("F2", CultureInfo.InstalledUICulture)
-                + ", heigth= " + Heigth.ToString("F2", CultureInfo.InstalledUICulture) + Area().ToString("F2", CultureInfo.InstalledUICulture);
+            return "Rectangle color = " 
+                + Color + " Width: " 
+                + Width.ToString("F2", CultureInfo.InvariantCulture)
+                + ", heigth= " 
+                + Heigth.ToString("F2", CultureInfo.InvariantCulture) 
+                + Area().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
